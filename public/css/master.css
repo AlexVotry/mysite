@@ -1,0 +1,52 @@
+
+
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+* {
+  margin:0;
+  padding:0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.brand {
+  position: absolute;
+  /*font-size: 3em;*/
+  font-family: 'STARWARS', sans-serif;
+}
+/*nav {
+  position: absolute;
+  margin: 10% 10%;
+}*/
+#navButton {
+  background-color: white;
+}
+.navB{
+  background-color: #0099cc;
+}
+.navbar {
+  /*position: absolute;*/
+  color: #000;
+  margin: 0 auto;
+  width: 98%;
+  background-color: #0099cc;
+  box-shadow: inset 2px -2px #004d66;
+  z-index: 3;
+}
+a {
+  color: #e6f9ff;
+}
+.navbar-nav li {
+  margin-top: 10%;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #000;
+}

@@ -1,28 +1,53 @@
 <!DOCTYPE HTML>
 <html ng-app="mysite">
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
-  <script src="javascript.js"></script>
-  <link href="style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+  <script src="javascripts/app.js"></script>
+  <link rel="stylesheet" href="css/master.css" media="screen">
+  <link href="css/starwars.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/parallax.css" media="screen" title="no title" charset="utf-8">
   <title>mysite</title>
 </head>
-<body class="ng-cloak">
-  <div ng-controller="firstController" class="container">
-    <div id="webDev">WEB DEV</div id="webDev">
-    <div id="starWars">
-      <div id="swContent">
-        <p>
-I was born on a marine base in Cherry Point North Carolina. We moved several times until second grade when we made our home in Oak Harbor, Washington. In 7th grade my dad bought a TRS80 home computer from Radio Shack. I learned a little Basic programming, enough to move some sprites around and shoot each other.
+<body>
+  <div class="wrapper">
 
-<!-- I moved to Seattle to go to the University of Washington. I couldn't decide what I wanted to do, and took classes in every subject I could think of. I finished with a BA in psychology and still no plans.
+    <nav class="navbar ">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" id="navButton" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navB icon-bar"></span>
+            <span class="navB icon-bar"></span>
+            <span class="navB icon-bar"></span>
+          </button>
+          <h1><a href="#/" class="brand">Alex Votry</a></h1>
+        </div>
 
-I bought a one-way ticket to Japan and found a job coaching international corporations in American culture and language.
-
-After 3 years I came back and went back to UW to complete my third year of Japanese. During this time I met the love of my life and convinced her to marry me. From there, I learned a trade, became a master plumber and started my own business, which I ran for over 15 years.
-
-During the last 5 years I found I wasn't enjoying what I was doing. I spent time exploring what I enjoy doing, and found programing was what I enjoyed doing most. I would write dynamic spread sheets to figure out various data. I finished a couple on line courses in Excell, but I wanted to do more. -->
-</p>
+      <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#/">Home</a></li>
+            <li><a href="#/parallax">Parallax</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </div>
       </div>
+    </nav>
+
+    <div class="container-fluid" ng-view>
+      <!-- <div ng-view> </div> -->
+    </div>
+
   </div>
-</body>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"> </script>
+    <script src="starwars/directives.js"> </script>
+    <script src="starwars/controller.js"></script>
+    <script src="parallax/directives.js"></script>
+    <script src="parallax/controller.js"></script>
+    <script src=""></script>
+    </script>
+   </body>
 </html>

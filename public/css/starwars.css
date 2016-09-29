@@ -1,0 +1,191 @@
+﻿/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+  font-family:"STARWARS";
+  src:url("../fonts/STARWARS.eot?") format("eot"),
+  url("../fonts/STARWARS.woff") format("woff"),
+  url("../fonts/STARWARS.ttf") format("truetype"),
+  url("../fonts/STARWARS.svg#STARWARS") format("svg");font-weight:normal;font-style:normal;}
+
+
+#starWarsContainer {
+  background: #000 url('http://cdn.wallpapersafari.com/12/1/8X7tjF.jpg') no-repeat;
+  overflow: hidden;
+  height: 90vh;
+  width: 100%;
+  margin: 0;
+}
+#webDev {
+  position: absolute;
+  visibility: hidden;
+  /*margin: 25% 25%;*/
+  top: 50%;
+  left: 30%;
+  font-family: 'STARWARS', sans-serif;
+  font-size: 10em;
+  -webkit-text-fill-color: 	#000; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFD700;
+  animation: slide 2s linear 12s
+            , fadeIn 6s forwards 12s;
+}
+
+#starWars {
+  position: absolute;
+  width: 18em;
+  height: 50em;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9em;
+  font-size: 5em;
+  font-weight: bold;
+  text-align: justify;
+  transform-origin: 50% 100%;
+  transform: perspective(500px) rotateX(20deg);
+}
+#swContent h2 {
+  font-family: 'STARWARS', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+#swContent {
+  color: gold;
+  position: absolute;
+  top: 100%;
+  animation: scroll 70s linear 1s;
+}
+
+/* set up lasers*/
+.laser {
+  position: absolute;
+  visibility: hidden;
+  height: 5px;
+  width: 150px;
+  transform-origin: bottom right;
+}
+#bike {
+  left: 20px;
+  top: 200px;
+  background-color: #7FFF00;
+  animation: laserFire 1s ease-in 17s;
+}
+#book {
+  left: 20px;
+  top: 500px;
+  background-color: red;
+  animation: laserFire 1s ease-in 23s;
+}
+#ins {
+  left: 20px;
+  top: 900px;
+  background-color: blue;
+  animation: laserFireOther 1s ease-in 21s;
+}
+#tea {
+  right: 500px;
+  top: 400px;
+  background-color: yellow;
+  animation: laserFireOther 1s ease-in 25s;
+  animation-direction: reverse;
+}
+#pizza {
+  right: 500px;
+  top: 500px;
+  background-color: purple;
+  animation: laserFire 1s ease-in 19s;
+  animation-direction: reverse;
+}
+#sienna {
+  right: 700px;
+  top: 700px;
+  background-color: #00FFFF;
+  animation: laserFire 1s ease-in 27s;
+  animation-direction: reverse;
+}
+#bikeApp:hover, #bookApp:hover, #insApp:hover, #teaApp:hover, #pizzaApp:hover, #siennaApp:hover {
+  transform: scale(1.2);
+}
+/*set up app pictures*/
+.apps {
+  height: 10%;
+  width: 10%;
+}
+.apps img {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: 10%;
+  border-radius: 15%;
+}
+
+#bikeApp {
+  left: 50px;
+  top: 150px;
+  animation: appear .25s ease-in 17.75s forwards;
+  border: 3px solid #7FFF00;
+}
+#bookApp {
+  left: 50px;
+  top: 425px;
+  animation: appear .25s ease-in 23.75s forwards;
+  border: 3px solid red;
+}
+#insApp {
+  left: 50px;
+  top: 700px;
+  animation: appear .25s ease-in 21.75s forwards;
+  border: 3px solid blue;
+}
+#teaApp {
+  right: 80px;
+  top: 150px;
+  animation: appear .25s ease-in 25.5s forwards;
+  border: 3px solid yellow;
+}
+#pizzaApp {
+  right: 80px;
+  top: 425px;
+  animation: appear .25s ease-in 19.75s forwards;
+  border: 3px solid purple;
+}
+#siennaApp {
+  right: 80px;
+  top: 700px;
+  animation: appear .25s ease-in 27.5s forwards;
+  border: 3px solid #00FFFF;
+}
+@keyframes scroll {
+  0% { top: 98%; }
+  100% { top: -150% }
+}
+
+@keyframes slide {
+  0%  { top: 150%; left: -100%; }
+  100% { top: 50%; left: 25%;  }
+}
+
+@keyframes fadeIn {
+  0% {visibility: visible; opacity: 1; transform: scale(.1); }
+  100% {visibility: visible; opacity: 1; transform: scale(1); }
+}
+
+@keyframes laserFire {
+  0%   { visibility: visible; opacity: .5; transform: skewY(15deg) scaleX(.1) translate(6000px); }
+  100% { visibility: visible; opacity: 1; transform: skewY(15deg) scaleX(2);}
+}
+@keyframes laserFireOther {
+  0%   { visibility: visible; opacity: .5; transform: skewY(145deg) scaleX(.1) translate(6000px); }
+  100% { visibility: visible; opacity: 1; transform: skewY(145deg) scaleX(2);}
+}
+@keyframes appear {
+  0% {visibility: hidden; opacity: 0; scale(.1); }
+  100% {visibility: visible; opacity: 1; scale(1); }
+}
+@media screen and (max-width: 800px){
+  #webDev {
+    left: 30%;
+    font-size: 5em;
+  }
+  #starWars {
+    font-size: 2.5em;
+  }
+}

@@ -9,7 +9,7 @@
   function config($routeProvider) {
     $routeProvider
     .when('/', {
-      templateUrl: 'starwars/view.html'
+      templateUrl: 'parallax/view.html'
       , contorllerAs: 'starWars'
       , controller: 'StarWarsController'
     })

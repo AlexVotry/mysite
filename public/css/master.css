@@ -1,8 +1,8 @@
 
-
 body {
   box-sizing: border-box;
   overflow: hidden;
+  background-color: #000080; /*navy*/
 }
 
 * {
@@ -49,4 +49,53 @@ a {
   height: 100vh;
   margin: 0;
   background-color: #000;
+}
+.title {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-shadow: 1px 1px 1px #000;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.success {
+  list-style-image: &#xf1a3;
+  color: #fff;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-shadow: 1px 1px 1px #000;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*.title .coding {
+  color: black;
+}*/
+#aboutMe {
+  margin-left: 100px;
+  font-size: 3em;
+}
+#contactMe {
+  margin-top: -72%;
+  margin-left: 100px;
+  font-size: 3em;
+}
+
+.pic {
+  height: 10%;
+  width: auto;
+}
+#email {
+  margin-top: 20%;
+}
+#linkedin {
+  margin-top: -32%;
+  height: 15%;
+}
+#github {
+  margin-top: -55%;
+  height: 20%;
 }

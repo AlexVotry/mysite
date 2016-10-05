@@ -18,15 +18,15 @@
   position: absolute;
   visibility: hidden;
   /*margin: 25% 25%;*/
-  top: 50%;
-  left: 30%;
+  top: 40%;
+  left: 27%;
   font-family: 'STARWARS', sans-serif;
-  font-size: 10em;
+  font-size: 5em;
   -webkit-text-fill-color: 	#000; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #FFD700;
-  animation: slide 2s linear 12s
-            , fadeIn 6s forwards 12s;
+  animation: slide 2s linear 10s
+            , fadeIn 6s forwards 10s;
 }
 
 #starWars {
@@ -36,7 +36,7 @@
   bottom: 0;
   left: 50%;
   margin-left: -9em;
-  font-size: 5em;
+  font-size: 2.5em;
   font-weight: bold;
   text-align: justify;
   transform-origin: 50% 100%;
@@ -48,6 +48,7 @@
   text-align: center;
 }
 #swContent {
+  /*font-size: .5em;*/
   color: gold;
   position: absolute;
   top: 100%;
@@ -64,19 +65,19 @@
 }
 #bike {
   left: 20px;
-  top: 200px;
+  top: 125px;
   background-color: #7FFF00;
   animation: laserFire 1s ease-in 17s;
 }
 #book {
   left: 20px;
-  top: 500px;
+  top: 425px;
   background-color: red;
   animation: laserFire 1s ease-in 23s;
 }
 #ins {
   left: 20px;
-  top: 900px;
+  top: 750px;
   background-color: blue;
   animation: laserFireOther 1s ease-in 21s;
 }
@@ -89,19 +90,20 @@
 }
 #pizza {
   right: 500px;
-  top: 500px;
+  top: 400px;
   background-color: purple;
   animation: laserFire 1s ease-in 19s;
   animation-direction: reverse;
 }
 #sienna {
   right: 700px;
-  top: 700px;
+  top: 600px;
   background-color: #00FFFF;
   animation: laserFire 1s ease-in 27s;
   animation-direction: reverse;
 }
-#bikeApp:hover, #bookApp:hover, #insApp:hover, #teaApp:hover, #pizzaApp:hover, #siennaApp:hover {
+
+#bikeApp:hover, #bookApp:hover, #insApp:hover, #teaApp:hover, #pizzaApp:hover, #siennaApp:hover, #email:hover, #linkedin:hover, #github:hover {
   transform: scale(1.2);
 }
 /*set up app pictures*/
@@ -119,40 +121,53 @@
 
 #bikeApp {
   left: 50px;
-  top: 150px;
+  top: -50px;
   animation: appear .25s ease-in 17.75s forwards;
   border: 3px solid #7FFF00;
 }
 #bookApp {
   left: 50px;
-  top: 425px;
+  top: 325px;
   animation: appear .25s ease-in 23.75s forwards;
   border: 3px solid red;
 }
 #insApp {
   left: 50px;
-  top: 700px;
+  top: 600px;
   animation: appear .25s ease-in 21.75s forwards;
   border: 3px solid blue;
 }
 #teaApp {
   right: 80px;
-  top: 150px;
+  top: 50px;
   animation: appear .25s ease-in 25.5s forwards;
   border: 3px solid yellow;
 }
 #pizzaApp {
   right: 80px;
-  top: 425px;
+  top: 325px;
   animation: appear .25s ease-in 19.75s forwards;
   border: 3px solid purple;
 }
 #siennaApp {
   right: 80px;
-  top: 700px;
+  top: 600px;
   animation: appear .25s ease-in 27.5s forwards;
   border: 3px solid #00FFFF;
 }
+#finger {
+  top: 60%;
+  left: 45%;
+  transform: rotate(-90deg);
+  animation: appear 3s linear 29s forwards,
+              point 2s linear 2s infinite;
+}
+@keyframes point {
+  0% { top: 60%; left: 45%; }
+  50% { top: 70%; left: 45%; }
+  100% { top: 60%; left: 45%; }
+}
+
 @keyframes scroll {
   0% { top: 98%; }
   100% { top: -150% }

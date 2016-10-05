@@ -21,7 +21,7 @@
   top: 40%;
   left: 27%;
   font-family: 'STARWARS', sans-serif;
-  font-size: 5em;
+  font-size: 4em;
   -webkit-text-fill-color: 	#000; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #FFD700;
@@ -71,13 +71,13 @@
 }
 #book {
   left: 20px;
-  top: 425px;
+  top: 300px;
   background-color: red;
   animation: laserFire 1s ease-in 23s;
 }
 #ins {
   left: 20px;
-  top: 750px;
+  top: 450px;
   background-color: blue;
   animation: laserFireOther 1s ease-in 21s;
 }
@@ -90,14 +90,14 @@
 }
 #pizza {
   right: 500px;
-  top: 400px;
+  top: 200px;
   background-color: purple;
   animation: laserFire 1s ease-in 19s;
   animation-direction: reverse;
 }
 #sienna {
   right: 700px;
-  top: 600px;
+  top: 400px;
   background-color: #00FFFF;
   animation: laserFire 1s ease-in 27s;
   animation-direction: reverse;
@@ -120,52 +120,52 @@
 }
 
 #bikeApp {
-  left: 50px;
-  top: -50px;
+  left: 5%;
+  top: -55%;
   animation: appear .25s ease-in 17.75s forwards;
   border: 3px solid #7FFF00;
 }
 #bookApp {
-  left: 50px;
-  top: 325px;
+  left: 5%;
+  top: -23%;
   animation: appear .25s ease-in 23.75s forwards;
   border: 3px solid red;
 }
 #insApp {
-  left: 50px;
-  top: 600px;
+  left: 5%;
+  top: 17%;
   animation: appear .25s ease-in 21.75s forwards;
   border: 3px solid blue;
 }
 #teaApp {
-  right: 80px;
-  top: 50px;
+  right: 5%;
+  top: -55%;
   animation: appear .25s ease-in 25.5s forwards;
   border: 3px solid yellow;
 }
 #pizzaApp {
-  right: 80px;
-  top: 325px;
+  right: 5%;
+  top: -23%;
   animation: appear .25s ease-in 19.75s forwards;
   border: 3px solid purple;
 }
 #siennaApp {
-  right: 80px;
-  top: 600px;
+  right: 5%;
+  top: 17%;
   animation: appear .25s ease-in 27.5s forwards;
   border: 3px solid #00FFFF;
 }
 #finger {
-  top: 60%;
+  top: 0%;
   left: 45%;
   transform: rotate(-90deg);
   animation: appear 3s linear 29s forwards,
               point 2s linear 2s infinite;
 }
 @keyframes point {
-  0% { top: 60%; left: 45%; }
-  50% { top: 70%; left: 45%; }
-  100% { top: 60%; left: 45%; }
+  0% { top: 0%; left: 45%; }
+  50% { top: 10%; left: 45%; }
+  100% { top: 0%; left: 45%; }
 }
 
 @keyframes scroll {
@@ -195,12 +195,11 @@
   0% {visibility: hidden; opacity: 0; scale(.1); }
   100% {visibility: visible; opacity: 1; scale(1); }
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1200px){
+  body {
+    font-size: .7em;
+  }
   #webDev {
     left: 30%;
-    font-size: 5em;
-  }
-  #starWars {
-    font-size: 2.5em;
   }
 }

@@ -2,7 +2,7 @@
 
 (function() {
 
-  angular.module('mysite')
+  angular.module('parallax')
   .directive('group1', group1)
   .directive('group2', group2)
   .directive('group3', group3)
@@ -25,7 +25,7 @@
       , templateUrl: 'parallax/partial.group2.html'
     }
   }
-  
+
   function group3() {
     return {
       restrict: 'E'

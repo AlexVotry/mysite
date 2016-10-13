@@ -3,7 +3,7 @@
 (function() {
 
   angular
-  .module('mysite')
+  .module('sWars', [])
   .directive('starWars', starWars);
 
   function starWars() {

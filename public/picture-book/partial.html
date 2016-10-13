@@ -1,0 +1,22 @@
+
+
+<div ng-controller="PicBookController">
+  <div id="photoSet">
+    <div class="flip-container" >
+      <div class="flipper"  ng-repeat="slide in turn.slides">
+        <button  class="frontBtn" ng-click="turn.advance($index)" type="button">next</button>
+
+        <div class="front pic{{ $index }}" >
+          <img ng-src="{{slide.image}}" alt="sprint" />
+        </div>
+
+        <div class="back pic{{ $index }}">
+          <h2> {{slide.text}}</h2>
+          <button class="backBtn" ng-click="turn.goBack($index +1)" type="button">previous</button>
+        </div>
+      </div>
+    </div>
+  <div id="firstText"> first Text </div>
+  <img id="slideBook" src="images/book.png" alt="book image" />
+</div>
+</div>

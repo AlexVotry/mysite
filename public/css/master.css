@@ -19,10 +19,17 @@ body {
   /*font-size: 3em;*/
   font-family: 'STARWARS', sans-serif;
 }
-/*nav {
+.footer {
   position: absolute;
-  margin: 10% 10%;
-}*/
+  z-index:100;
+  bottom: 0vh;
+  top: auto;
+  background-color: #2F4F4F; /*grey*/
+  opacity: .9;
+  color: #DEB887;
+  text-align:center;
+  width: 100%;
+}
 #navButton {
   background-color: white;
 }
@@ -60,9 +67,14 @@ a {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.success {
+#success {
+  /*box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;*/
+  padding: 3%;
   font-size: .8em;
-  /*list-style-image: &#xf1a3;*/
+  background-color: #2E8B57;
+  opacity: .7;
   color: #fff;
   text-align: left;
   position: absolute;
@@ -71,14 +83,13 @@ a {
   text-shadow: 1px 1px 1px #000;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  border-radius: 10%;
+  box-shadow: 3px 3px 3px #006400;
 }
 /*.title .coding {
   color: black;
 }*/
-#aboutMe {
-  margin-left: 100px;
-  font-size: 3em;
-}
+
 #contactMe {
   margin-top: -72%;
   margin-left: 100px;
@@ -88,6 +99,8 @@ a {
 .pic {
   height: 10%;
   width: auto;
+  border-radius: 15%;
+  padding: 0;
 }
 #email {
   margin-top: 20%;
@@ -99,4 +112,10 @@ a {
 #github {
   margin-top: -55%;
   height: 20%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+#email:hover, #linkedin:hover, #github:hover {
+  transform: scale(1.2);
+  box-shadow: 4px 4px 4px 4px #707070;
 }

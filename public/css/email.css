@@ -1,0 +1,22 @@
+#myModal {
+  top: 32%;
+  left: -25%;
+  /*width: 15%;*/
+}
+#myModal .modal-dialog {
+  width: 30%;
+  height: 15%;
+}
+#myModal .modal-content {
+  background-color: green;
+  font-size: .7em;
+}
+.modal-backdrop.fade.in {
+  z-index: -1;
+}
+
+#email {
+height: 10%;
+width: auto;
+margin-top: 20%;
+}

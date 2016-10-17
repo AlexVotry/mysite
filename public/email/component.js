@@ -4,8 +4,7 @@
 
   angular
   .module('email')
-  .component('emailService', function() {
+  .component('emailService', {
     templateUrl: 'email/partial.html'
-  });
-
+  })
 })();

@@ -50,7 +50,7 @@
   /*z-index: 0;*/
 
 }
-button {
+.flipper button {
   backface-visibility: hidden;
   position: absolute;
   z-index: 15;

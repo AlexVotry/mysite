@@ -3,7 +3,7 @@
 (function() {
 
   angular
-  .module('mysite', ['parallax', 'sWars', 'pictureBook', 'email', 'ngRoute'])
+  .module('mysite', ['parallax', 'sWars', 'pictureBook', 'email', 'ngRoute', 'ui.bootstrap'])
   .config(config);
 
   function config($routeProvider) {

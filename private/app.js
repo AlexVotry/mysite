@@ -4,10 +4,10 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/', (req, res)=> {
-  res
-  .status(200)
-  .sendFile('index.html');
+app.get('/', (req, res) => {
+  res.sendFile('index.html');
 });
+
+
 
 module.exports = app;

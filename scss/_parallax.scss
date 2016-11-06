@@ -1,0 +1,79 @@
+    /* Parallax base styles
+    --------------------------------------------- */
+
+    .parallax {
+      height: 500px; /* fallback for older browsers */
+      height: 100vh;
+      font-size: 200%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-perspective: 300px;
+      perspective: 300px;
+    }
+
+    .parallax__group {
+      position: relative;
+      height: 500px; /* fallback for older browsers */
+      height: 100vh;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+
+    .parallax__layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    @mixin webTrans ($z, $s, $indx) {
+      -webkit-transform: translateZ($z) scale($s);
+      transform: translateZ($z) scale($s);
+      z-index: $indx;
+    }
+      /*goes in order of closest and fastest to furthest and slowest*/
+      .parallax__layer--fore {
+        @include webTrans(90px, .7, 1);
+      }
+
+      .parallax__layer--base {
+        @include webTrans(0, 1, 4);
+      }
+
+      .parallax__layer--back {
+        @include webTrans(-300px, 2, 3);
+      }
+
+      .parallax__layer--deep {
+        @include webTrans(-600px, 3, 2);
+        -moz-transform: translateZ(-600px);
+      }
+
+    /* style the groups
+    --------------------------------------------- */
+
+    #group1 {
+      z-index: 1; /* slide over group 2 */
+      .parallax__layer--deep {
+        background-image: url('http://cdn.wallpapersafari.com/12/1/8X7tjF.jpg');
+      }
+    }
+    #group2 {
+      z-index: 3; /* slide under groups 1 and 3 */
+      .parallax__layer--base {
+        background-image: url('https://images.alphacoders.com/450/45061.jpg');
+      }
+    }
+    #group4 {
+      z-index: 2; /* slide under group 3 and 5 */
+      .parallax__layer--back {
+        top: -65%;
+        background: orange;
+      }
+    }
+    #group6 {
+      z-index: 2; /* slide under group 5 and 7 */
+      .parallax__layer--back {
+        background: rgb(245,235,100) ;
+      }
+    }

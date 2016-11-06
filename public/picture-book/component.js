@@ -31,10 +31,12 @@
     vm.advance = function(index) {
       var currentPic = '.pic' + index;
       var z = picture.length - index;
+      console.log('Az: ', z);
     $('.pic'+ index).parent().addClass('flip').css({ 'z-index': z });
     }
 
     vm.goBack = function(index) {
+      console.log('Bz: ', index);
       var currentPic = '.pic' + (index - 1);
       $('.pic'+ (index - 1)).parent().removeClass('flip').css({ 'z-index': index });
     }

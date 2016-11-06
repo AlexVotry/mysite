@@ -1,7 +1,7 @@
 
 <a class='ebtn' data-toggle="modal" data-target="#myModal" >
   <img id="email" class="col-sm-3 col-sm-offset-2 pic" src="images/email.png" alt="email icon">
-</a>.
+</a>
 
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-sm">
@@ -19,9 +19,9 @@
         <input type="text" name="mail"><br>
         Comment:<br>
         <input type="text" name="comment" size="50"><br><br>
-        <input type="submit" value="Send">
-        <input type="reset" value="Reset">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn btn-group btn-info" type="submit" value="Send">Send</button>
+        <button class="btn btn-group btn-primary" type="reset" value="Reset">Reset</button>
+        <button class="btn btn-group btn-danger" type="button" data-dismiss="modal">Close</button>
       </div>
 
       <div class="modal-footer">
@@ -30,25 +30,54 @@
   </div>
 </div>
 
-<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
+<!--
+<div class="mod-overlay"> </div>
+<div class="mod">
+  <div class="mod-header">
+    <a class="mod-close">&times;</a>
+    <h3>Purchase Sweet Lands</h3>
+  </div> -->
+<!--
+  <div class="mod-content">
+    <form class="form" action="mailto:alexvotry@gmail.com" method="post" enctype="text/plain">
+    <label class="form-label" for="name">Name</label>
+    <input class="form-input" type="text" name="name"><br>
+    <label for="mail">email</label>
+    <input type="text" name="mail"><br>
+    <label for="comment">Comments</label>
+    <input type="text" name="comment" size="50"><br><br>
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
   </div>
-</div> -->
+</div>
+
+<div class='mod-overlay'></div>
+  <div class='mod'>
+    <div class='mod-header'>
+      <a class='mod-close' href='#' aria-label='Close'>&times;</a>
+      <h3>Register</h3>
+    </div>
+    <div class='mod-content'>
+      <form class='form' action=''>
+        <fieldset class='form-field'>
+          <select class='cs-select cs-skin-elastic' name='type'>
+            <option value='visa'>Visa</option>
+            <option value='mastercard'>MasterCard</option>
+            <option value='american_express'>American Express</option>
+          </select>
+        </fieldset>
+        <fieldset class='form-field'>
+          <label class='form-label' for='number'>CC Number</label>
+          <input class='form-input' type='text' id='number' />
+        </fieldset>
+        <fieldset class='form-field'>
+          <label class='form-label' for='expiration'>CC Expiration</label>
+          <input class='form-input' type='text' id='expiration' />
+        </fieldset>
+        <div class='form-submit'>
+          <input class='btn' type='Submit' value='Submit' />
+        </div>
+      </form>
+    </div>
+  </div> -->

@@ -1,0 +1,216 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+  font-family:"STARWARS";
+  src:url("../fonts/STARWARS.eot?") format("eot"),
+  url("../fonts/STARWARS.woff") format("woff"),
+  url("../fonts/STARWARS.ttf") format("truetype"),
+  url("../fonts/STARWARS.svg#STARWARS") format("svg");font-weight:normal;font-style:normal;
+}
+
+$gold: #FFD700;
+$acidGreen: #7FFF00;
+$aqua: #00FFFF;
+
+@mixin keyframes ($action) {
+    @keyframes #{$action} {
+        @content;
+    }
+}
+
+#starWarsContainer {
+  background: #000 url('http://cdn.wallpapersafari.com/12/1/8X7tjF.jpg') no-repeat;
+  overflow: hidden;
+  height: 90vh;
+  width: 100%;
+  // margin: 0;
+}
+#webDev {
+  position: absolute;
+  visibility: hidden;
+  top: 45%;
+  left: 34%;
+  font-family: 'STARWARS', sans-serif;
+  font-size: 4em;
+  -webkit-text-fill-color: 	#000; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $gold;
+  animation: fadeIn 3s linear 10s forwards;
+}
+
+#starWars {
+  position: absolute;
+  width: 18em;
+  height: 50em;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9em;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: justify;
+  transform-origin: 50% 100%;
+  transform: perspective(500px) rotateX(20deg);
+}
+#swContent h2 {
+  font-family: 'STARWARS', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+#swContent {
+  color: $gold;
+  position: absolute;
+  top: 100%;
+  animation: scroll 70s linear 1s;
+}
+
+/* set up lasers*/
+.laser {
+  position: absolute;
+  visibility: hidden;
+  height: 5px;
+  width: 150px;
+  transform-origin: bottom right;
+}
+@mixin laseranimate($delay, $name: laserFire) {
+  animation: $name 1s ease-in $delay;
+}
+@mixin laserShot($color, $vpx, $hpx, $align: left) {
+  top: $vpx;
+  #{$align}: $hpx;
+  background-color: $color;
+}
+
+#bike {
+  @include laserShot($acidGreen, 125px, 20px)
+  @include laseranimate(17s);
+}
+#book {
+  @include laserShot(red, 425px, 20px)
+  @include laseranimate(23s);
+}
+#ins {
+  @include laserShot(blue, 750px, 20px)
+  @include laseranimate(21s, laserR);
+}
+#tea {
+  @include laserShot(yellow, 400px, 500px, right)
+  @include laseranimate(25s, laserR);
+  animation-direction: reverse;
+}
+#pizza {
+  @include laserShot(purple, 400px, 500px, right)
+  @include laseranimate(19s)
+  animation-direction: reverse;
+}
+#sienna {
+  @include laserShot($aqua, 600px, 700px, right);
+  @include laseranimate(27s);
+  animation-direction: reverse;
+}
+
+$apps: bike book ins tea pizza sienna;
+@each $app in $apps {
+  ##{$app}App:hover {
+    transform: scale(1.2)!important;
+    visibility: visible ;
+    animation: none;
+
+  }
+
+}
+/*set up app pictures*/
+@mixin imageSize ($showing) {
+  height: 10%;
+  width: 10%;
+  img {
+    position: absolute;
+    visibility: $showing;
+    height: auto;
+    width: 10%;
+    border-radius: 15%;
+  }
+}
+
+.apps {
+  @include imageSize(hidden);
+}
+
+.afterHover {
+  @include imageSize(visible);
+}
+
+@mixin appAnimate($delay, $color, $vpx, $hpx, $align: left) {
+  top: $vpx;
+  #{$align}: $hpx;
+  animation: appear .25s ease-in $delay forwards;
+  border: 3px solid $color;
+}
+@mixin fingerAnimate($delay) {
+  animation: fingerView .25s ease-in $delay forwards, point 3s linear $delay infinite;
+}
+// delay, color, top px, left/right px, default left,
+#bikeApp {
+  @include appAnimate(17.75s, $acidGreen, 5%, 5%);
+}
+#bookApp {
+  @include appAnimate(23.75s, red, 37%, 5%);
+}
+#insApp {
+  @include appAnimate(21.75s, blue, 77%, 5%);
+}
+#teaApp {
+  @include appAnimate(25.5s, yellow, 5%, 5%, right);
+}
+#pizzaApp {
+  @include appAnimate(19s, purple, 37%, 5%, right);
+}
+#siennaApp {
+  @include appAnimate(27.75s, $aqua, 77%, 5%, right);
+}
+#finger {
+  @include fingerAnimate(28s);
+}
+
+@keyframes point {
+  0%, 100% { top: 60%; left: 45%; }
+  50% { top: 70%; left: 45%; }
+}
+
+@keyframes slide {
+  0%  { top: 150%; left: -100%; }
+  100% { top: 50%; left: 25%;  }
+}
+
+@keyframes fadeIn {
+  0% { visibility: visible; opacity: 1;  transform: scale(.1); }
+  100% { visibility: visible; opacity: 1; transform: scale(1.2); }
+}
+@keyframes appear {
+  0% {visibility: hidden; opacity: 0; transform: scale(.1); }
+  100% {visibility: visible; opacity: 1; transform: scale(1); }
+}
+@keyframes fingerView {
+  0% {visibility: hidden; opacity: 0; transform: scale(.1); }
+  100% {visibility: visible; opacity: 1; transform: rotate(-90deg) scale(1); }
+}
+@keyframes scroll {
+  0% { top: 98%; }
+  100% { top: -150% }
+}
+
+@include keyframes (laserFire) {
+  0%   { visibility: visible; opacity: .5; transform: skewY(15deg) scaleX(.1) translate(6000px); }
+  100% { visibility: visible; opacity: 1; transform: skewY(15deg) scaleX(2);}
+}
+@include keyframes (laserR) {
+  0%   { visibility: visible; opacity: .5; transform: skewY(145deg) scaleX(.1) translate(6000px); }
+  100% { visibility: visible; opacity: 1; transform: skewY(145deg) scaleX(2);}
+}
+
+@media screen and (max-width: 1200px){
+  body {
+    font-size: .7em;
+  }
+  #webDev {
+    left: 30%;
+  }
+}

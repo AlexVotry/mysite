@@ -106,6 +106,7 @@
 #bikeApp:hover, #bookApp:hover, #insApp:hover, #teaApp:hover, #pizzaApp:hover, #siennaApp:hover {
   transform: scale(1.2);
 }
+
 /*set up app pictures*/
 .apps {
   height: 10%;

@@ -281,6 +281,25 @@
   width: auto;
   margin-top: 20%; }
 
+#contactMe {
+  margin-top: -72%;
+  margin-left: 100px;
+  font-size: 3em; }
+
+#linkedin {
+  margin-top: -32%;
+  height: 15%; }
+
+#github {
+  margin-top: -55%;
+  height: 20%;
+  background-color: #fff;
+  border-radius: 50%; }
+
+#email:hover, #linkedin:hover, #github:hover {
+  transform: scale(1.2);
+  box-shadow: 4px 4px 4px 4px #707070; }
+
 /* Parallax base styles
     --------------------------------------------- */
 .parallax {
@@ -429,11 +448,6 @@
   top: -14%;
   z-index: -1; }
 
-#aboutMe {
-  margin-top: 5%;
-  margin-left: 100px;
-  font-size: 3em; }
-
 body {
   box-sizing: border-box;
   overflow: hidden;
@@ -501,49 +515,49 @@ a {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-#success {
-  /*box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;*/
-  padding: 3%;
-  font-size: .8em;
-  background-color: #2E8B57;
-  opacity: .7;
-  color: #fff;
-  text-align: left;
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  text-shadow: 1px 1px 1px #000;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 10%;
-  box-shadow: 3px 3px 3px #006400; }
-
-/*.title .coding {
-  color: black;
-}*/
-#contactMe {
-  margin-top: -72%;
-  margin-left: 100px;
-  font-size: 3em; }
-
 .pic {
   height: 10%;
   width: auto;
   border-radius: 15%;
   padding: 0; }
 
-#linkedin {
-  margin-top: -32%;
-  height: 15%; }
+#aboutMe {
+  margin-top: 5%;
+  margin-left: 100px;
+  font-size: 3em; }
 
-#github {
-  margin-top: -55%;
-  height: 20%;
-  background-color: #fff;
-  border-radius: 50%; }
+#success {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12%;
+  flex-basis: fill; }
 
-#email:hover, #linkedin:hover, #github:hover {
-  transform: scale(1.2);
-  box-shadow: 4px 4px 4px 4px #707070; }
+.successContent {
+  flex: 1 0 27%;
+  margin: 2%;
+  padding: 3%;
+  font-size: .8em;
+  background-color: #2E8B57;
+  opacity: .7;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10%;
+  box-shadow: 3px 3px 3px #006400; }
+
+.sub {
+  margin-left: 4%; }
+
+@media (max-width: 770px) {
+  .successContent {
+    font-size: .8em;
+    flex: 0 0 80%;
+    margin: 2% 5%; } }
+
+@media (max-width: 500px) {
+  .successContent {
+    font-size: .6em; } }
+
+@media (max-width: 1200px) {
+  #success {
+    font-size: 1.5em; } }

@@ -19,3 +19,22 @@ height: 10%;
 width: auto;
 margin-top: 20%;
 }
+#contactMe {
+  margin-top: -72%;
+  margin-left: 100px;
+  font-size: 3em;
+}
+#linkedin {
+  margin-top: -32%;
+  height: 15%;
+}
+#github {
+  margin-top: -55%;
+  height: 20%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+#email:hover, #linkedin:hover, #github:hover {
+  transform: scale(1.2);
+  box-shadow: 4px 4px 4px 4px #707070;
+}

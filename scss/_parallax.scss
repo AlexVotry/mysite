@@ -39,6 +39,10 @@
       .parallax__layer--base {
         @include webTrans(0, 1, 4);
       }
+      .parallax__layer--script {
+        height: 10%;
+        @include webTrans(0, 1, 4);
+      }
 
       .parallax__layer--back {
         @include webTrans(-300px, 2, 3);

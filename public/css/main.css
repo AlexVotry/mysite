@@ -319,6 +319,12 @@
   transform: translateZ(0) scale(1);
   z-index: 4; }
 
+.parallax__layer--script {
+  height: 10%;
+  -webkit-transform: translateZ(0) scale(1);
+  transform: translateZ(0) scale(1);
+  z-index: 4; }
+
 .parallax__layer--back {
   -webkit-transform: translateZ(-300px) scale(2);
   transform: translateZ(-300px) scale(2);
@@ -379,7 +385,7 @@
     backface-visibility: hidden;
     position: absolute;
     z-index: 15;
-    margin-top: 60%; }
+    margin-top: 90%; }
     .flipper button:hover {
       background-color: blue; }
 
@@ -388,10 +394,9 @@
 
 /*hide back of pane during swap*/
 .front, .back {
+  height: 150%;
   backface-visibility: hidden;
-  position: absolute;
-  top: 20;
-  left: 20; }
+  position: absolute; }
 
 /*front pane, placed above back*/
 .front {
@@ -399,26 +404,29 @@
   transform: rotateY(0deg); }
 
 .back {
-  /*transform-origin: left;*/
+  height: 400px;
   background-color: yellow;
   padding-left: 10%;
   /*transform-origin: left;*/
   transform: rotateY(180deg); }
 
 #firstText {
-  /*background-color: blue;*/
   position: absolute;
-  margin-left: 35%;
-  margin-top: -23%; }
+  left: 65%;
+  top: 23%; }
 
-.backBtn {
-  margin-left: 80%; }
+#backBtn {
+  left: 72%;
+  top: 0%; }
 
 #slideBook {
+  height: 120%; }
+
+#photoAlbum {
   position: absolute;
   height: 130%;
-  left: -7.5%;
-  top: -10%;
+  left: -15%;
+  top: -14%;
   z-index: -1; }
 
 #aboutMe {

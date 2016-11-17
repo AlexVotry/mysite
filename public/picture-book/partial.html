@@ -1,5 +1,3 @@
-
-<!-- <div ng-controller="PicBookController"> -->
 <div id="photoSet">
   <div class="flip-container" >
 
@@ -7,7 +5,7 @@
       <button  id="frontBtn" ng-click="turn.advance($index)" type="button">next</button>
 
       <div class="front pic{{ $index }}" >
-        <img ng-src="{{slide.image}}" alt="sprint" />
+        <img class="frontImage" ng-src="{{slide.image}}" alt="sprint" />
       </div>
 
       <div class="back pic{{ $index }}">
@@ -17,9 +15,8 @@
     </div>
 
     <div id="photoAlbum">
-      <img id="slideBook" src="images/book.png" alt="book image" />
+      <!-- <img id="slideBook" src="images/woodBook.jpg" alt="book image" /> -->
       <div id="firstText"> first Text </div>
     </div>
   </div>
 </div>
-<!-- </div> -->

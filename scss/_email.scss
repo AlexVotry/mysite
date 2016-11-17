@@ -1,9 +1,13 @@
+@import "responsive";
+
 #myModal {
   top: 32%;
   left: -25%;
+  @include breakpoint(max-width, 770px) { top: 15%; left: 5% };
   .modal-dialog {
     width: 30%;
     height: 15%;
+    @include breakpoint(max-width, 770px) { width: 100%; };
   }
   .modal-content {
     background-color: green;
@@ -14,25 +18,36 @@
   z-index: -1;
 }
 
+#contactMe {
+  @include breakpoint(max-width, 1300px) { margin-top: -92%; };
+  @include breakpoint(max-height, 770px) {  margin-top: -59%; };
+  @include breakpoint(max-height, 810px) { margin-top: -72%; };
+  @include breakpoint(max-width, 1200px) { margin-top: -90%; };
+  @include breakpoint(max-width, 770px) { margin-top: -145%; };
+  @include breakpoint(max-width, 500px) { margin-top: -209%; };
+  margin-top: -62%;
+  margin-left: 100px;
+  font-size: 3em;
+}
 #email {
 height: 10%;
 width: auto;
 margin-top: 20%;
-}
-#contactMe {
-  margin-top: -72%;
-  margin-left: 100px;
-  font-size: 3em;
+@include breakpoint(max-width, 500px) { margin-top: 40%; margin-left: 8%; };
 }
 #linkedin {
-  margin-top: -32%;
+  margin-top: -27%;
   height: 15%;
+  @include breakpoint(max-width, 500px) { margin-top: -120%; margin-left: 8%; };
+
 }
 #github {
-  margin-top: -55%;
+  margin-top: -48%;
   height: 20%;
   background-color: #fff;
   border-radius: 50%;
+  @include breakpoint(max-width, 500px) { margin-top: -165%; margin-left: 5%; };
+
 }
 #email:hover, #linkedin:hover, #github:hover {
   transform: scale(1.2);

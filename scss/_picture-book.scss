@@ -1,15 +1,36 @@
+@import "responsive";
+
+@mixin bookBorder($pos) {
+  @if $pos == "left" {
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+  } @else {
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+  }
+    border-top: 10px solid #A0522D;
+    border-#{$pos}: 10px solid #A0522D;
+    border-bottom: 10px solid #A0522D;
+    border-bottom-#{$pos}-radius: 2em;
+    border-top-#{$pos}-radius: 2em;
+}
 
 .flip-container, .front, .back, .firstText {
   width: 400px;
-  height: 300px;
+  height: 400px;
 }
 .flip-container img {
   max-width: 100%;
 }
+.frontImage {
+  @include bookBorder(left);
+}
+.backText {
+}
 #photoSet {
   position: relative;
   margin-top: 20%;
-  margin-left: 30%
+  margin-left: 15%;
 }
 /*flip speed goes here*/
 .flipper {
@@ -45,38 +66,36 @@
   transform: rotateY(0deg);
 }
 .back {
-  height: 400px;
+  height: 410px;
   background-color: yellow;
   padding-left: 10%;
-  /*transform-origin: left;*/
   transform: rotateY(180deg);
+  @include bookBorder(right);
 }
 #firstText {
+  height: 410px;
+  width: 410px;
+  background-color: yellow;
   position: absolute;
-  left: 65%;
-  top: 23%
-  /*z-index: 0;*/
+  left: 420px;
+  top: 10.5%;
+  @include bookBorder(right);
 }
-// #frontBtn {
-//   position: absolute;
-//   top: 100%;
-// }
 #backBtn {
   left: 72%;
   top: 0%;
 }
 
 #slideBook {
-  // position: absolute;
   height: 120%;
-  // left: -2%;
-  // top: 45%;
-  // z-index: -1;
+  @include breakpoint(max-width, 770px) { visibility: hidden; };
 }
+
 #photoAlbum {
   position: absolute;
   height: 130%;
-  left: -15%;
+  left: -20px;
+  right: 15%;
   top: -14%;
   z-index: -1;
 }

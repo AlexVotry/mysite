@@ -4,12 +4,15 @@
 @import "email";
 @import "parallax";
 @import "picture-book";
-
+@import "responsive";
 
 body {
   box-sizing: border-box;
   overflow: hidden;
   background-color: #000080; /*navy*/
+  @include breakpoint(max-width, 950px) {
+    font-size: .8em;
+  };
 }
 
 * {
@@ -82,8 +85,9 @@ a {
 
 #aboutMe {
   margin-top: 5%;
-  margin-left: 100px;
+  margin-left: 5%;
   font-size: 3em;
+  color: #2E8B57;
 }
 
 #success {
@@ -105,28 +109,16 @@ a {
   text-shadow: 1px 1px 1px #000;
   border-radius: 10%;
   box-shadow: 3px 3px 3px #006400;
+  @include breakpoint(max-width, 950px) {
+      flex: 0 0 80%;
+      margin: 2% 5%;
+  };
+  @include breakpoint(max-width, 500px) {
+        margin-top: 10%;
+        font-size: .3em;
+  };
 }
 
 .sub {
   margin-left: 4%;
-}
-
-@media (max-width: 770px) {
-  .successContent {
-    font-size: .8em;
-    flex: 0 0 80%;
-    margin: 2% 5%;
-  }
-}
-@media (max-width: 500px) {
-  .successContent {
-    font-size: .6em;
-  }
-}
-@media (max-width: 1200px) {
-  #success {
-    font-size: 1.5em;
-  }
-  .successContent {
-  }
 }

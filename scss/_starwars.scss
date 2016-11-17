@@ -1,4 +1,5 @@
 /* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@import "responsive";
 @font-face {
   font-family:"STARWARS";
   src:url("../fonts/STARWARS.eot?") format("eot"),
@@ -16,6 +17,7 @@ $aqua: #00FFFF;
         @content;
     }
 }
+
 
 #starWarsContainer {
   background: #000 url('http://cdn.wallpapersafari.com/12/1/8X7tjF.jpg') no-repeat;
@@ -35,6 +37,8 @@ $aqua: #00FFFF;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: $gold;
   animation: fadeIn 3s linear 10s forwards;
+  @include breakpoint(max-width, 1300px) { font-size: 3em; };
+  @include breakpoint(max-width, 650px) { left: 26%; };
 }
 
 #starWars {
@@ -49,6 +53,7 @@ $aqua: #00FFFF;
   text-align: justify;
   transform-origin: 50% 100%;
   transform: perspective(500px) rotateX(20deg);
+  @include breakpoint(max-width, 1300px) { font-size: 1.5em; };
 }
 #swContent h2 {
   font-family: 'STARWARS', sans-serif;
@@ -60,6 +65,7 @@ $aqua: #00FFFF;
   position: absolute;
   top: 100%;
   animation: scroll 70s linear 1s;
+  @include breakpoint(max-width, 650px) { animation: scroll 40s linear 1s; };
 }
 
 /* set up lasers*/
@@ -80,34 +86,49 @@ $aqua: #00FFFF;
 }
 
 #bike {
-  @include laserShot($acidGreen, 125px, 20px)
+  @include laserShot($acidGreen, 125px, 20px);
   @include laseranimate(17s);
 }
 #book {
-  @include laserShot(red, 425px, 20px)
+  @include laserShot(red, 425px, 20px);
   @include laseranimate(23s);
+  @include breakpoint(max-height, 810px) {
+    @include laserShot(red, 350px, 20px);
+  }
 }
 #ins {
-  @include laserShot(blue, 750px, 20px)
+  @include laserShot(blue, 750px, 20px);
   @include laseranimate(21s, laserR);
+  @include breakpoint(max-height, 810px) {
+    @include laserShot(blue, 525px, 20px);
+  }
 }
 #tea {
-  @include laserShot(yellow, 400px, 500px, right)
+  @include laserShot(yellow, 400px, 500px, right);
   @include laseranimate(25s, laserR);
   animation-direction: reverse;
+  @include breakpoint(max-height, 810px) {
+    @include laserShot(yellow, 350px, 500px, right);
+  }
 }
 #pizza {
-  @include laserShot(purple, 400px, 500px, right)
-  @include laseranimate(19s)
+  @include laserShot(purple, 400px, 500px, right);
+  @include laseranimate(19s);
   animation-direction: reverse;
+  @include breakpoint(max-height, 810px) {
+    @include laserShot(purple, 300px, 350px, right);
+  }
 }
-#sienna {
+#reddit {
   @include laserShot($aqua, 600px, 700px, right);
   @include laseranimate(27s);
   animation-direction: reverse;
+  @include breakpoint(max-height, 810px) {
+    @include laserShot($aqua, 400px, 700px, right);
+  }
 }
 
-$apps: bike book ins tea pizza sienna;
+$apps: bike book ins tea pizza reddit;
 @each $app in $apps {
   ##{$app}App:hover {
     transform: scale(1.2)!important;
@@ -163,7 +184,7 @@ $apps: bike book ins tea pizza sienna;
 #pizzaApp {
   @include appAnimate(19s, purple, 37%, 5%, right);
 }
-#siennaApp {
+#redditApp {
   @include appAnimate(27.75s, $aqua, 77%, 5%, right);
 }
 #finger {
@@ -204,13 +225,4 @@ $apps: bike book ins tea pizza sienna;
 @include keyframes (laserR) {
   0%   { visibility: visible; opacity: .5; transform: skewY(145deg) scaleX(.1) translate(6000px); }
   100% { visibility: visible; opacity: 1; transform: skewY(145deg) scaleX(2);}
-}
-
-@media screen and (max-width: 1200px){
-  body {
-    font-size: .7em;
-  }
-  #webDev {
-    left: 30%;
-  }
 }

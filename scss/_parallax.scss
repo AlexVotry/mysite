@@ -65,7 +65,11 @@
     #group2 {
       z-index: 3; /* slide under groups 1 and 3 */
       .parallax__layer--base {
-        background-image: url('https://images.alphacoders.com/450/45061.jpg');
+        background-image: url('http://img.lum.dolimg.com/v1/images/open-uri20150608-27674-obj7u0_7c60f729.jpeg?region=0%2C0%2C1200%2C513');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
       }
     }
     #group4 {
@@ -78,6 +82,6 @@
     #group6 {
       z-index: 2; /* slide under group 5 and 7 */
       .parallax__layer--back {
-        background: rgb(245,235,100) ;
+        background: url('http://www.clipartkid.com/images/846/wood-panel-hd-background-bible-clipart-BGPilc-clipart.jpg');
       }
     }

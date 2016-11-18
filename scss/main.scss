@@ -22,64 +22,29 @@ body {
   width: 100%;
   height: 100vh;
 }
-.brand {
-  position: absolute;
-  font-family: 'STARWARS', sans-serif;
-}
 .footer {
   display: inline-flex;
   position: absolute;
   z-index:100;
   bottom: 0vh;
   top: auto;
-  background-color: #2F4F4F; /*grey*/
+  background-color: $grey; /*grey*/
   opacity: .9;
   color: #DEB887;
   width: 100%;
   font-size: 2em;
 }
-#name {
+#footerName {
   margin-left: 45%;
 }
-#player {
+#soundPlayer {
   margin: 1% 10%;
-}
-#navButton {
-  background-color: white;
-}
-.navB{
-  background-color: #0099cc;
-}
-.navbar {
-  /*position: absolute;*/
-  color: #000;
-  margin: 0 auto;
-  width: 98%;
-  background-color: #0099cc;
-  box-shadow: inset 2px -2px #004d66;
-  z-index: 3;
-}
-a {
-  color: #e6f9ff;
-}
-.navbar-nav li {
-  margin-top: 10%;
 }
 .container {
   width: 100%;
   height: 100vh;
   margin: 0;
   background-color: #000;
-}
-.title {
-  color: #fff;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  text-shadow: 1px 1px 1px #000;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 .pic {
   height: 10%;
@@ -88,10 +53,14 @@ a {
   padding: 0;
 }
 #aboutMe {
+  font-family: 'STARWARS', sans-serif;
+  -webkit-text-fill-color: 	#000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $gold;
   margin-top: 5%;
   margin-left: 5%;
   font-size: 3em;
-  color: #2E8B57;
+  color: $gold;
   text-shadow: 1px 1px 1px #000;
 }
 #success {
@@ -106,12 +75,11 @@ a {
   margin: 2%;
   padding: 3%;
   font-size: .8em;
-  background-color: #2E8B57;
-  opacity: .7;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  background-color: $gold;
+  opacity: .5;
+  color: #000;
   border-radius: 10%;
-  box-shadow: 3px 3px 3px #006400;
+  box-shadow: 3px 3px 3px #000;
   @include breakpoint(max-width, 950px) {
       flex: 0 0 80%;
       margin: 2% 5%;

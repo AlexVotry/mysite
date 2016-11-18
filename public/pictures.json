@@ -1,0 +1,68 @@
+
+[
+  {
+    "picture": "images/kid.jpg",
+    "name": "kid",
+    "caption": "kid"
+  },
+  {
+    "picture": "images/basilica.jpg",
+    "name": "Basilica",
+    "caption": "basilica"
+  },
+  {
+    "picture": "images/kimono.jpg",
+    "name": "Kimono",
+    "caption": "My new place in Japan"
+  },
+  {
+    "picture": "images/jpn2.jpg",
+    "name": "Dinner with friends",
+    "caption": "Dinner with Friends"
+  },
+  {
+    "picture": "images/fuji.jpg",
+    "name": "Mt. Fuji",
+    "caption": "Climbing Mt. Fuji to see the Sun Rise"
+  },
+  {
+    "picture": "images/santorini.jpg",
+    "name": "Santorini",
+    "caption": "Santorini, Greece"
+  },
+  {
+    "picture": "images/parthenon.jpg",
+    "name": "Parthenon",
+    "caption": "Parthenon"
+  },
+  {
+    "picture": "images/elephant.jpg",
+    "name": "Riding an elephant",
+    "caption": "Elephant ride in Chang Mai, Thailand"
+  },
+  {
+    "picture": "images/thai_head.jpg",
+    "name": "thai_head",
+    "caption": "thai_head"
+  },
+  {
+    "picture": "images/basilica.jpg",
+    "name": "Basilica",
+    "caption": "basilica"
+  },
+  {
+    "picture": "images/prague.jpg",
+    "name": "Prague",
+    "caption": "Prague"
+  },
+  {
+    "picture": "images/jersey.jpg",
+    "name": "Leader Jersey",
+    "caption": "Leading the season points total"
+  },
+  {
+    "picture": "images/TeamPursuitGold.jpg",
+    "name": "Team win",
+    "caption": "Winning with my team"
+  }
+]

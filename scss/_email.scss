@@ -17,7 +17,6 @@
 .modal-backdrop.fade.in {
   z-index: -1;
 }
-
 #contactMe {
   @include breakpoint(max-width, 1300px) { margin-top: -92%; };
   @include breakpoint(max-height, 770px) {  margin-top: -59%; };
@@ -28,6 +27,7 @@
   margin-top: -62%;
   margin-left: 100px;
   font-size: 3em;
+  color: $holoBlue;
 }
 #email {
 height: 10%;
@@ -39,7 +39,6 @@ margin-top: 20%;
   margin-top: -27%;
   height: 15%;
   @include breakpoint(max-width, 500px) { margin-top: -120%; margin-left: 8%; };
-
 }
 #github {
   margin-top: -48%;
@@ -47,9 +46,8 @@ margin-top: 20%;
   background-color: #fff;
   border-radius: 50%;
   @include breakpoint(max-width, 500px) { margin-top: -165%; margin-left: 5%; };
-
 }
 #email:hover, #linkedin:hover, #github:hover {
   transform: scale(1.2);
-  box-shadow: 4px 4px 4px 4px #707070;
+  box-shadow: 4px 4px 4px 4px $holoBlue;
 }

@@ -1,20 +1,5 @@
 @import "responsive";
 
-@mixin bookBorder($pos) {
-  @if $pos == "left" {
-    border-bottom-right-radius: 1em;
-    border-top-right-radius: 1em;
-  } @else {
-    border-bottom-left-radius: 1em;
-    border-top-left-radius: 1em;
-  }
-    border-top: 10px solid #A0522D;
-    border-#{$pos}: 10px solid #A0522D;
-    border-bottom: 10px solid #A0522D;
-    border-bottom-#{$pos}-radius: 2em;
-    border-top-#{$pos}-radius: 2em;
-}
-
 .flip-container, .front, .back, .firstText {
   width: 400px;
   height: 400px;
@@ -24,8 +9,7 @@
 }
 .frontImage {
   @include bookBorder(left);
-}
-.backText {
+  @include breakpoint(max-width, 960px) {@include vertBorder(top); };
 }
 #photoSet {
   position: relative;
@@ -38,6 +22,7 @@
   transform-style: preserve-3d;
   position: relative;
   transform-origin: right;
+  @include breakpoint(max-width, 960px) { transform-origin: 0% -50%; };
   button {
     backface-visibility: hidden;
     position: absolute;
@@ -48,54 +33,40 @@
     }
   }
 }
-
 .flip {
   transform: rotateY(180deg);
+  @include breakpoint(max-width, 960px) { transform: rotateX(-180deg); };
 }
-
 /*hide back of pane during swap*/
 .front, .back {
-  height: 150%;
   backface-visibility: hidden;
   position: absolute;
 }
-
 /*front pane, placed above back*/
 .front {
   z-index: 2;
   transform: rotateY(0deg);
+  transform: rotateX(0deg);
 }
 .back {
   height: 410px;
-  background-color: yellow;
+  background-color: $swGrey;
   padding-left: 10%;
   transform: rotateY(180deg);
   @include bookBorder(right);
+  @include breakpoint(max-width, 960px) { transform: rotateX(180deg); transform-origin: 0% -48%; @include vertBorder(bottom); };
 }
 #firstText {
   height: 410px;
   width: 410px;
-  background-color: yellow;
+  padding: 15px;
+  background-color: $swGrey;
   position: absolute;
-  left: 420px;
-  top: 10.5%;
+  left: 400px;
   @include bookBorder(right);
+  @include breakpoint(max-width, 960px) { left: 0px; top: 390px; @include vertBorder(bottom); };
 }
 #backBtn {
   left: 72%;
   top: 0%;
-}
-
-#slideBook {
-  height: 120%;
-  @include breakpoint(max-width, 770px) { visibility: hidden; };
-}
-
-#photoAlbum {
-  position: absolute;
-  height: 130%;
-  left: -20px;
-  right: 15%;
-  top: -14%;
-  z-index: -1;
 }

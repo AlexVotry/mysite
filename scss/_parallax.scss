@@ -76,12 +76,14 @@
       z-index: 2; /* slide under group 3 and 5 */
       .parallax__layer--back {
         top: -65%;
-        background: orange;
+        background-image: url('https://i.ytimg.com/vi/pUaxXsqGeFI/maxresdefault.jpg');
+        background-size: contain;
       }
     }
     #group6 {
       z-index: 2; /* slide under group 5 and 7 */
       .parallax__layer--back {
-        background: url('http://www.clipartkid.com/images/846/wood-panel-hd-background-bible-clipart-BGPilc-clipart.jpg');
+        background: url('http://vignette2.wikia.nocookie.net/starwars/images/f/fc/Empireendshot.jpg/revision/latest?cb=20120110005351');
+        background-size: cover;
       }
     }

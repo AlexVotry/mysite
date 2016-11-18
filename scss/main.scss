@@ -14,12 +14,10 @@ body {
     font-size: .8em;
   };
 }
-
 * {
   margin:0;
   padding:0;
 }
-
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -29,6 +27,7 @@ body {
   font-family: 'STARWARS', sans-serif;
 }
 .footer {
+  display: inline-flex;
   position: absolute;
   z-index:100;
   bottom: 0vh;
@@ -36,8 +35,14 @@ body {
   background-color: #2F4F4F; /*grey*/
   opacity: .9;
   color: #DEB887;
-  text-align:center;
   width: 100%;
+  font-size: 2em;
+}
+#name {
+  margin-left: 45%;
+}
+#player {
+  margin: 1% 10%;
 }
 #navButton {
   background-color: white;
@@ -82,14 +87,13 @@ a {
   border-radius: 15%;
   padding: 0;
 }
-
 #aboutMe {
   margin-top: 5%;
   margin-left: 5%;
   font-size: 3em;
   color: #2E8B57;
+  text-shadow: 1px 1px 1px #000;
 }
-
 #success {
   width: 100%;
   display: flex;
@@ -97,7 +101,6 @@ a {
   margin-top: 12%;
   flex-basis: fill;
 }
-
 .successContent {
   flex: 1 0 27%;
   margin: 2%;
@@ -118,7 +121,6 @@ a {
         font-size: .3em;
   };
 }
-
 .sub {
   margin-left: 4%;
 }

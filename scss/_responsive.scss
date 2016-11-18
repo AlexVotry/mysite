@@ -1,3 +1,117 @@
+$gold: #FFD700;
+$acidGreen: #7FFF00;
+$aqua: #00FFFF;
+$swGrey: #9da09e;
+$holoBlue: #60cbff;
+$bookColor: #A0522D;
+
+// starwars
+@font-face {
+  font-family:"STARWARS";
+  src:url("../fonts/STARWARS.eot?") format("eot"),
+  url("../fonts/STARWARS.woff") format("woff"),
+  url("../fonts/STARWARS.ttf") format("truetype"),
+  url("../fonts/STARWARS.svg#STARWARS") format("svg");font-weight:normal;font-style:normal;
+}
+@mixin keyframes ($action) {
+    @keyframes #{$action} {
+        @content;
+    }
+}
+@mixin laseranimate($delay, $name: laserFire) {
+  animation: $name 1s ease-in $delay;
+}
+@mixin laserShot($color, $vpx, $hpx, $align: left) {
+  top: $vpx;
+  #{$align}: $hpx;
+  background-color: $color;
+}
+/*set up app pictures*/
+@mixin imageSize ($showing) {
+  height: 10%;
+  width: 10%;
+  img {
+    position: absolute;
+    visibility: $showing;
+    height: auto;
+    width: 10%;
+    border-radius: 15%;
+  }
+}
+@mixin appAnimate($delay, $color, $vpx, $hpx, $align: left) {
+  top: $vpx;
+  #{$align}: $hpx;
+  animation: appear .25s ease-in $delay forwards;
+  border: 3px solid $color;
+}
+@mixin fingerAnimate($delay) {
+  animation: fingerView .25s ease-in $delay forwards, point 3s linear $delay infinite;
+}
+@keyframes point {
+  0%, 100% { top: 60%; left: 45%; }
+  50% { top: 70%; left: 45%; }
+}
+@keyframes slide {
+  0%  { top: 150%; left: -100%; }
+  100% { top: 50%; left: 25%;  }
+}
+@keyframes fadeIn {
+  0% { visibility: visible; opacity: 1;  transform: scale(.1); }
+  100% { visibility: visible; opacity: 1; transform: scale(1.2); }
+}
+@keyframes appear {
+  0% {visibility: hidden; opacity: 0; transform: scale(.1); }
+  100% {visibility: visible; opacity: 1; transform: scale(1); }
+}
+@keyframes fingerView {
+  0% {visibility: hidden; opacity: 0; transform: scale(.1); }
+  100% {visibility: visible; opacity: 1; transform: rotate(-90deg) scale(1); }
+}
+@keyframes scroll {
+  0% { top: 98%; }
+  100% { top: -150% }
+}
+@include keyframes (laserFire) {
+  0%   { visibility: visible; opacity: .5; transform: skewY(15deg) scaleX(.1) translate(6000px); }
+  100% { visibility: visible; opacity: 1; transform: skewY(15deg) scaleX(2);}
+}
+@include keyframes (laserR) {
+  0%   { visibility: visible; opacity: .5; transform: skewY(145deg) scaleX(.1) translate(6000px); }
+  100% { visibility: visible; opacity: 1; transform: skewY(145deg) scaleX(2);}
+}
+
+// picture book..
+@mixin bookBorder($pos) {
+  @if $pos == "left" {
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+  } @else {
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+  }
+    border-top: 10px solid $bookColor;
+    border-#{$pos}: 10px solid $bookColor;
+    border-bottom: 10px solid $bookColor;
+    border-bottom-#{$pos}-radius: 2em;
+    border-top-#{$pos}-radius: 2em;
+}
+@mixin vertBorder($pos) {
+  @if $pos == "top" {
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom: hidden;
+  } @else {
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top: hidden;
+  }
+    border-left: 10px solid $bookColor;
+    border-right: 10px solid $bookColor;
+    border-#{$pos}: 10px solid $bookColor;
+    border-#{$pos}-left-radius: 2em;
+    border-#{$pos}-right-radius: 2em;
+}
+//all
 @mixin breakpoint($val, $pix) {
   @media($val: $pix) {
     @content;

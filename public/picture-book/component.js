@@ -2,9 +2,9 @@
 
 (function() {
 
-  var pictureBook = {
-    templateUrl: ''
-  }
+  // var pictureBook = {
+  //   templateUrl: ''
+  // }
 
   angular
   .module('pictureBook', ['ui.bootstrap', 'ngAnimate'])
@@ -32,18 +32,12 @@
       var currentPic = '.pic' + index;
       var previous = '.pic' + (index + 1);
       var z = picture.length - index;
-      console.log('Az: ', z);
       $(currentPic).parent().addClass('flip').css({ 'z-index': z });
-      // if (previous) {
-      //   $('.flip').css({ 'z-index': 0 });
-      // }
     }
 
     vm.goBack = function(index) {
-      console.log('Bz: ', index);
       var currentPic = '.pic' + (index - 1);
       $('.pic'+ (index - 1)).parent().removeClass('flip').css({ 'z-index': index });
-      // $('.pic'+ (index)).parent().css({ 'z-index': 0  });
     }
   };
 

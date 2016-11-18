@@ -5,6 +5,79 @@
   font-weight: normal;
   font-style: normal; }
 
+/*set up app pictures*/
+@keyframes point {
+  0%, 100% {
+    top: 60%;
+    left: 45%; }
+  50% {
+    top: 70%;
+    left: 45%; } }
+
+@keyframes slide {
+  0% {
+    top: 150%;
+    left: -100%; }
+  100% {
+    top: 50%;
+    left: 25%; } }
+
+@keyframes fadeIn {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.2); } }
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes fingerView {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(-90deg) scale(1); } }
+
+@keyframes scroll {
+  0% {
+    top: 98%; }
+  100% {
+    top: -150%; } }
+
+@keyframes laserFire {
+  0% {
+    visibility: visible;
+    opacity: .5;
+    transform: skewY(15deg) scaleX(0.1) translate(6000px); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: skewY(15deg) scaleX(2); } }
+
+@keyframes laserR {
+  0% {
+    visibility: visible;
+    opacity: .5;
+    transform: skewY(145deg) scaleX(0.1) translate(6000px); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: skewY(145deg) scaleX(2); } }
+
 #starWarsContainer {
   background: #000 url("http://cdn.wallpapersafari.com/12/1/8X7tjF.jpg") no-repeat;
   overflow: hidden;
@@ -162,7 +235,6 @@
   visibility: visible;
   animation: none; }
 
-/*set up app pictures*/
 .apps {
   height: 10%;
   width: 10%; }
@@ -222,6 +294,13 @@
 #finger {
   animation: fingerView 0.25s ease-in 28s forwards, point 3s linear 28s infinite; }
 
+@font-face {
+  font-family: "STARWARS";
+  src: url("../fonts/STARWARS.eot?") format("eot"), url("../fonts/STARWARS.woff") format("woff"), url("../fonts/STARWARS.ttf") format("truetype"), url("../fonts/STARWARS.svg#STARWARS") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*set up app pictures*/
 @keyframes point {
   0%, 100% {
     top: 60%;
@@ -317,7 +396,8 @@
 #contactMe {
   margin-top: -62%;
   margin-left: 100px;
-  font-size: 3em; }
+  font-size: 3em;
+  color: #60cbff; }
   @media (max-width: 1300px) {
     #contactMe {
       margin-top: -92%; } }
@@ -366,7 +446,7 @@
 
 #email:hover, #linkedin:hover, #github:hover {
   transform: scale(1.2);
-  box-shadow: 4px 4px 4px 4px #707070; }
+  box-shadow: 4px 4px 4px 4px #60cbff; }
 
 /* Parallax base styles
     --------------------------------------------- */
@@ -446,13 +526,94 @@
   /* slide under group 3 and 5 */ }
   #group4 .parallax__layer--back {
     top: -65%;
-    background: orange; }
+    background-image: url("https://i.ytimg.com/vi/pUaxXsqGeFI/maxresdefault.jpg");
+    background-size: contain; }
 
 #group6 {
   z-index: 2;
   /* slide under group 5 and 7 */ }
   #group6 .parallax__layer--back {
-    background: url("http://www.clipartkid.com/images/846/wood-panel-hd-background-bible-clipart-BGPilc-clipart.jpg"); }
+    background: url("http://vignette2.wikia.nocookie.net/starwars/images/f/fc/Empireendshot.jpg/revision/latest?cb=20120110005351");
+    background-size: cover; }
+
+@font-face {
+  font-family: "STARWARS";
+  src: url("../fonts/STARWARS.eot?") format("eot"), url("../fonts/STARWARS.woff") format("woff"), url("../fonts/STARWARS.ttf") format("truetype"), url("../fonts/STARWARS.svg#STARWARS") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*set up app pictures*/
+@keyframes point {
+  0%, 100% {
+    top: 60%;
+    left: 45%; }
+  50% {
+    top: 70%;
+    left: 45%; } }
+
+@keyframes slide {
+  0% {
+    top: 150%;
+    left: -100%; }
+  100% {
+    top: 50%;
+    left: 25%; } }
+
+@keyframes fadeIn {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.2); } }
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes fingerView {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(-90deg) scale(1); } }
+
+@keyframes scroll {
+  0% {
+    top: 98%; }
+  100% {
+    top: -150%; } }
+
+@keyframes laserFire {
+  0% {
+    visibility: visible;
+    opacity: .5;
+    transform: skewY(15deg) scaleX(0.1) translate(6000px); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: skewY(15deg) scaleX(2); } }
+
+@keyframes laserR {
+  0% {
+    visibility: visible;
+    opacity: .5;
+    transform: skewY(145deg) scaleX(0.1) translate(6000px); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: skewY(145deg) scaleX(2); } }
 
 .flip-container, .front, .back, .firstText {
   width: 400px;
@@ -469,6 +630,16 @@
   border-bottom: 10px solid #A0522D;
   border-bottom-left-radius: 2em;
   border-top-left-radius: 2em; }
+  @media (max-width: 960px) {
+    .frontImage {
+      border-bottom-right-radius: 1em;
+      border-bottom-left-radius: 1em;
+      border-bottom: hidden;
+      border-left: 10px solid #A0522D;
+      border-right: 10px solid #A0522D;
+      border-top: 10px solid #A0522D;
+      border-top-left-radius: 2em;
+      border-top-right-radius: 2em; } }
 
 #photoSet {
   position: relative;
@@ -481,6 +652,9 @@
   transform-style: preserve-3d;
   position: relative;
   transform-origin: right; }
+  @media (max-width: 960px) {
+    .flipper {
+      transform-origin: 0% -50%; } }
   .flipper button {
     backface-visibility: hidden;
     position: absolute;
@@ -491,21 +665,24 @@
 
 .flip {
   transform: rotateY(180deg); }
+  @media (max-width: 960px) {
+    .flip {
+      transform: rotateX(-180deg); } }
 
 /*hide back of pane during swap*/
 .front, .back {
-  height: 150%;
   backface-visibility: hidden;
   position: absolute; }
 
 /*front pane, placed above back*/
 .front {
   z-index: 2;
-  transform: rotateY(0deg); }
+  transform: rotateY(0deg);
+  transform: rotateX(0deg); }
 
 .back {
   height: 410px;
-  background-color: yellow;
+  background-color: #9da09e;
   padding-left: 10%;
   transform: rotateY(180deg);
   border-bottom-left-radius: 1em;
@@ -515,14 +692,26 @@
   border-bottom: 10px solid #A0522D;
   border-bottom-right-radius: 2em;
   border-top-right-radius: 2em; }
+  @media (max-width: 960px) {
+    .back {
+      transform: rotateX(180deg);
+      transform-origin: 0% -48%;
+      border-top-right-radius: 1em;
+      border-top-left-radius: 1em;
+      border-top: hidden;
+      border-left: 10px solid #A0522D;
+      border-right: 10px solid #A0522D;
+      border-bottom: 10px solid #A0522D;
+      border-bottom-left-radius: 2em;
+      border-bottom-right-radius: 2em; } }
 
 #firstText {
   height: 410px;
   width: 410px;
-  background-color: yellow;
+  padding: 15px;
+  background-color: #9da09e;
   position: absolute;
-  left: 420px;
-  top: 10.5%;
+  left: 400px;
   border-bottom-left-radius: 1em;
   border-top-left-radius: 1em;
   border-top: 10px solid #A0522D;
@@ -530,24 +719,101 @@
   border-bottom: 10px solid #A0522D;
   border-bottom-right-radius: 2em;
   border-top-right-radius: 2em; }
+  @media (max-width: 960px) {
+    #firstText {
+      left: 0px;
+      top: 390px;
+      border-top-right-radius: 1em;
+      border-top-left-radius: 1em;
+      border-top: hidden;
+      border-left: 10px solid #A0522D;
+      border-right: 10px solid #A0522D;
+      border-bottom: 10px solid #A0522D;
+      border-bottom-left-radius: 2em;
+      border-bottom-right-radius: 2em; } }
 
 #backBtn {
   left: 72%;
   top: 0%; }
 
-#slideBook {
-  height: 120%; }
-  @media (max-width: 770px) {
-    #slideBook {
-      visibility: hidden; } }
+@font-face {
+  font-family: "STARWARS";
+  src: url("../fonts/STARWARS.eot?") format("eot"), url("../fonts/STARWARS.woff") format("woff"), url("../fonts/STARWARS.ttf") format("truetype"), url("../fonts/STARWARS.svg#STARWARS") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
-#photoAlbum {
-  position: absolute;
-  height: 130%;
-  left: -20px;
-  right: 15%;
-  top: -14%;
-  z-index: -1; }
+/*set up app pictures*/
+@keyframes point {
+  0%, 100% {
+    top: 60%;
+    left: 45%; }
+  50% {
+    top: 70%;
+    left: 45%; } }
+
+@keyframes slide {
+  0% {
+    top: 150%;
+    left: -100%; }
+  100% {
+    top: 50%;
+    left: 25%; } }
+
+@keyframes fadeIn {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.2); } }
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes fingerView {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.1); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(-90deg) scale(1); } }
+
+@keyframes scroll {
+  0% {
+    top: 98%; }
+  100% {
+    top: -150%; } }
+
+@keyframes laserFire {
+  0% {
+    visibility: visible;
+    opacity: .5;
+    transform: skewY(15deg) scaleX(0.1) translate(6000px); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: skewY(15deg) scaleX(2); } }
+
+@keyframes laserR {
+  0% {
+    visibility: visible;
+    opacity: .5;
+    transform: skewY(145deg) scaleX(0.1) translate(6000px); }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: skewY(145deg) scaleX(2); } }
 
 body {
   box-sizing: border-box;
@@ -571,6 +837,7 @@ body {
   font-family: 'STARWARS', sans-serif; }
 
 .footer {
+  display: inline-flex;
   position: absolute;
   z-index: 100;
   bottom: 0vh;
@@ -579,8 +846,14 @@ body {
   /*grey*/
   opacity: .9;
   color: #DEB887;
-  text-align: center;
-  width: 100%; }
+  width: 100%;
+  font-size: 2em; }
+
+#name {
+  margin-left: 45%; }
+
+#player {
+  margin: 1% 10%; }
 
 #navButton {
   background-color: white; }
@@ -629,7 +902,8 @@ a {
   margin-top: 5%;
   margin-left: 5%;
   font-size: 3em;
-  color: #2E8B57; }
+  color: #2E8B57;
+  text-shadow: 1px 1px 1px #000; }
 
 #success {
   width: 100%;

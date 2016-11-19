@@ -19,7 +19,7 @@
       var total = pictures.length - 1;
       for (var i = total; i >= 0; i--) {
         if(i === total) {
-          slides.push({ image: pictures[i].picture, text: "thanks for looking"});
+          slides.push({ image: pictures[i].picture, text: "Ready for what's next!"});
         } else {
           slides.push({ image: pictures[i].picture, text: pictures[i + 1].caption });
         }

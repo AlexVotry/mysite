@@ -9,28 +9,22 @@
   function PicBookController (albumService) {
     var vm = this;
     var flipped = false;
-    var pictures = {};
-    var slides = [];
-    vm.slides = slides;
+    vm.slides = [];
 
-    albumService.getPics().then(data => {
-      pictures = data;
-      var total = pictures.length - 1;
-      for (var i = total; i >= 0; i--) {
-        if(i === total) {
-          slides.push({ image: pictures[i].picture, text: "thanks for looking"});
-        } else {
-          slides.push({ image: pictures[i].picture, text: pictures[i + 1].caption });
-        }
-      }
+    albumService.getSlides().then( slides => {
+      vm.slides = slides;
     });
 
     vm.advance = function(index) {
-      albumService.advance(index);
+      var currentPic = '.pic' + index;
+      var previous = '.pic' + (index + 1);
+      var z = vm.slides.length - index;
+      $(currentPic).parent().addClass('flip').css({ 'z-index': z });
     }
 
     vm.goBack = function(index) {
-      albumService.goBack(index);
+      var currentPic = '.pic' + (index - 1);
+      $('.pic'+ (index - 1)).parent().removeClass('flip').css({ 'z-index': index });
     }
   };
 

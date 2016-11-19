@@ -1,8 +1,12 @@
+
 <div id="photoSet">
   <div class="flip-container" >
 
+    <div id="firstText"> I grew up in Oak Harbor, WA.  When I was in junior high, my dad bought me a TRS-80 computer from Radio Shack.
+
+    </div>
     <div class="flipper"  ng-repeat="slide in turn.slides">
-      <button  id="frontBtn" ng-click="turn.advance($index)" type="button">next</button>
+      <button  class="btn" id="frontBtn" ng-click="turn.advance($index)" type="button"><span class="glyphicon glyphicon-backward"> Next</span></button>
 
       <div class="front pic{{ $index }}" >
         <img class="frontImage" ng-src="{{slide.image}}" alt="sprint" />
@@ -10,11 +14,9 @@
 
       <div class="back pic{{ $index }}">
         <h2> {{slide.text}}</h2>
-        <button id="backBtn" ng-click="turn.goBack($index +1)" type="button">previous</button>
+        <button class="btn" id="backBtn" ng-click="turn.goBack($index +1)" type="button">Back  <span class="glyphicon glyphicon-forward"></span></button>
       </div>
     </div>
 
-    <div id="firstText"> I grew up in Oak Harbor, WA.  When I was in junior high, my dad bought me a TRS-80 computer from Radio Shack.
-    </div>
   </div>
 </div>

@@ -623,13 +623,13 @@
   max-width: 100%; }
 
 .frontImage {
-  border-bottom-right-radius: 1em;
-  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;
   border-top: 10px solid #A0522D;
-  border-left: 10px solid #A0522D;
+  border-right: 10px solid #A0522D;
   border-bottom: 10px solid #A0522D;
-  border-bottom-left-radius: 2em;
-  border-top-left-radius: 2em; }
+  border-bottom-right-radius: 2em;
+  border-top-right-radius: 2em; }
   @media (max-width: 960px) {
     .frontImage {
       border-bottom-right-radius: 1em;
@@ -644,13 +644,13 @@
 #photoSet {
   position: relative;
   margin-top: 20%;
-  margin-left: 15%; }
+  margin-left: 45%; }
 
 .flipper {
   transition: 2s;
   transform-style: preserve-3d;
   position: relative;
-  transform-origin: right; }
+  transform-origin: left; }
   @media (max-width: 960px) {
     .flipper {
       transform-origin: 0% -50%; } }
@@ -658,9 +658,11 @@
     backface-visibility: hidden;
     position: absolute;
     z-index: 15;
-    margin-top: 90%; }
+    margin-top: 90%;
+    margin-left: 75%;
+    background-color: #7FFF00; }
     .flipper button:hover {
-      background-color: blue; }
+      background-color: #60cbff; }
 
 .flip {
   transform: rotateY(180deg); }
@@ -684,13 +686,13 @@
   background-color: #9da09e;
   padding-left: 10%;
   transform: rotateY(180deg);
-  border-bottom-left-radius: 1em;
-  border-top-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em;
   border-top: 10px solid #A0522D;
-  border-right: 10px solid #A0522D;
+  border-left: 10px solid #A0522D;
   border-bottom: 10px solid #A0522D;
-  border-bottom-right-radius: 2em;
-  border-top-right-radius: 2em; }
+  border-bottom-left-radius: 2em;
+  border-top-left-radius: 2em; }
   @media (max-width: 960px) {
     .back {
       transform: rotateX(180deg);
@@ -710,14 +712,14 @@
   padding: 15px;
   background-color: #9da09e;
   position: absolute;
-  left: 400px;
-  border-bottom-left-radius: 1em;
-  border-top-left-radius: 1em;
+  left: -400px;
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em;
   border-top: 10px solid #A0522D;
-  border-right: 10px solid #A0522D;
+  border-left: 10px solid #A0522D;
   border-bottom: 10px solid #A0522D;
-  border-bottom-right-radius: 2em;
-  border-top-right-radius: 2em; }
+  border-bottom-left-radius: 2em;
+  border-top-left-radius: 2em; }
   @media (max-width: 960px) {
     #firstText {
       left: 0px;
@@ -732,7 +734,7 @@
       border-bottom-right-radius: 2em; } }
 
 #backBtn {
-  left: 72%;
+  left: -75%;
   top: 0%; }
 
 @font-face {

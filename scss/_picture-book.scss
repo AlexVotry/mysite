@@ -3,32 +3,36 @@
 .flip-container, .front, .back, .firstText {
   width: 400px;
   height: 400px;
+  // left: 410px;
 }
 .flip-container img {
   max-width: 100%;
 }
 .frontImage {
-  @include bookBorder(left);
+  @include bookBorder(right);
   @include breakpoint(max-width, 960px) {@include vertBorder(top); };
 }
 #photoSet {
   position: relative;
   margin-top: 20%;
-  margin-left: 15%;
+  margin-left: 45%;
+
 }
 .flipper {
   transition: 2s;
   transform-style: preserve-3d;
   position: relative;
-  transform-origin: right;
+  transform-origin: left;
   @include breakpoint(max-width, 960px) { transform-origin: 0% -50%; };
   button {
     backface-visibility: hidden;
     position: absolute;
     z-index: 15;
     margin-top: 90%;
+    margin-left: 75%;
+    background-color: $acidGreen;
     &:hover {
-      background-color: blue;
+      background-color: $holoBlue;
     }
   }
 }
@@ -52,7 +56,7 @@
   background-color: $swGrey;
   padding-left: 10%;
   transform: rotateY(180deg);
-  @include bookBorder(right);
+  @include bookBorder(left);
   @include breakpoint(max-width, 960px) { transform: rotateX(180deg); transform-origin: 0% -48%; @include vertBorder(bottom); };
 }
 #firstText {
@@ -61,11 +65,11 @@
   padding: 15px;
   background-color: $swGrey;
   position: absolute;
-  left: 400px;
-  @include bookBorder(right);
+  left: -400px;
+  @include bookBorder(left);
   @include breakpoint(max-width, 960px) { left: 0px; top: 390px; @include vertBorder(bottom); };
 }
 #backBtn {
-  left: 72%;
+  left: -75%;
   top: 0%;
 }

@@ -616,8 +616,8 @@
     transform: skewY(145deg) scaleX(2); } }
 
 .flip-container, .front, .back {
-  width: 400px;
-  height: 400px; }
+  width: 100%;
+  height: 100%; }
 
 .flip-container img {
   max-width: 100%; }
@@ -643,12 +643,16 @@
 
 #photoSet {
   position: relative;
+  width: 400px;
+  height: 400px;
   margin-top: 20%;
   margin-left: 45%; }
   @media (max-width: 960px) {
     #photoSet {
       margin-top: 25%;
-      margin-left: 5%; } }
+      margin-left: 5%;
+      width: 300px;
+      height: 300px; } }
 
 .flipper {
   transition: 2s;
@@ -658,17 +662,18 @@
   transform-origin: left; }
   @media (max-width: 960px) {
     .flipper {
-      transform-origin: 100% 400px; } }
+      transform-origin: 100% 298px; } }
   .flipper button {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     z-index: 15;
-    margin-top: 90%;
-    margin-left: 75%;
     background-color: #7FFF00; }
     .flipper button:hover {
       background-color: #60cbff; }
+  @media (max-width: 960px) {
+    .flipper h2 {
+      font-size: 20px; } }
 
 .flip {
   transform: rotateY(-180deg); }
@@ -707,6 +712,7 @@
   @media (max-width: 960px) {
     .back {
       transform: rotateX(180deg);
+      height: 305px;
       border-top-right-radius: 1em;
       border-top-left-radius: 1em;
       border-top: hidden;
@@ -717,8 +723,8 @@
       border-bottom-right-radius: 2em; } }
 
 #firstText {
-  height: 410px;
-  width: 410px;
+  height: 102%;
+  width: 102%;
   padding: 15px;
   background-color: #9da09e;
   position: absolute;
@@ -733,7 +739,7 @@
   @media (max-width: 960px) {
     #firstText {
       left: 0px;
-      top: 390px;
+      top: 290px;
       border-top-right-radius: 1em;
       border-top-left-radius: 1em;
       border-top: hidden;
@@ -744,8 +750,12 @@
       border-bottom-right-radius: 2em; } }
 
 #backBtn {
-  left: -75%;
-  top: 0%; }
+  left: 10%;
+  top: 90%; }
+
+#frontBtn {
+  left: 65%;
+  top: 90%; }
 
 @font-face {
   font-family: "STARWARS";
@@ -884,6 +894,10 @@ body {
   font-size: 3em;
   color: #FFD700;
   text-shadow: 1px 1px 1px #000; }
+  @media (max-width: 960px) {
+    #aboutMe {
+      left: 0px;
+      font-size: 2em; } }
 
 #success {
   width: 100%;

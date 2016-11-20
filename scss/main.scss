@@ -62,6 +62,8 @@ body {
   font-size: 3em;
   color: $gold;
   text-shadow: 1px 1px 1px #000;
+  @include breakpoint(max-width, 960px) { left: 0px; font-size: 2em };
+
 }
 #success {
   width: 100%;

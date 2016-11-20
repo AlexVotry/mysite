@@ -1,12 +1,12 @@
 @import "responsive";
 
 .flip-container, .front, .back {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
+  // @include breakpoint(max-width, 960px) {width: 70%; height: 70%; };
 }
 .flip-container img {
   max-width: 100%;
-  // @include breakpoint(max-width, 960px) {width: 70%; height: 70%; };
 }
 .frontImage {
   @include bookBorder(right);
@@ -14,9 +14,11 @@
 }
 #photoSet {
   position: relative;
+  width: 400px;
+  height: 400px;
   margin-top: 20%;
   margin-left: 45%;
-  @include breakpoint(max-width, 960px) { margin-top: 25%; margin-left: 5%; };
+  @include breakpoint(max-width, 960px) { margin-top: 25%; margin-left: 5%; width: 300px; height: 300px; };
 }
 .flipper {
   transition: 2s;
@@ -24,18 +26,19 @@
   position: relative;
   -webkit-transform-origin: left;
   transform-origin: left;
-  @include breakpoint(max-width, 960px) { transform-origin: 100% 400px; };
+  @include breakpoint(max-width, 960px) { transform-origin: 100% 298px; };
   button {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     z-index: 15;
-    margin-top: 90%;
-    margin-left: 75%;
     background-color: $acidGreen;
     &:hover {
       background-color: $holoBlue;
     }
+  }
+  h2 {
+    @include breakpoint(max-width, 960px) { font-size: 20px; };
   }
 }
 .flip {
@@ -62,19 +65,23 @@
   padding-left: 10%;
   transform: rotateY(-180deg);
   @include bookBorder(left);
-  @include breakpoint(max-width, 960px) { transform: rotateX(180deg); @include vertBorder(bottom); };
+  @include breakpoint(max-width, 960px) { transform: rotateX(180deg); height: 305px; @include vertBorder(bottom); };
 }
 #firstText {
-  height: 410px;
-  width: 410px;
+  height: 102%;
+  width: 102%;
   padding: 15px;
   background-color: $swGrey;
   position: absolute;
   left: -400px;
   @include bookBorder(left);
-  @include breakpoint(max-width, 960px) { left: 0px; top: 390px; @include vertBorder(bottom); };
+  @include breakpoint(max-width, 960px) { left: 0px; top: 290px; @include vertBorder(bottom); };
 }
 #backBtn {
-  left: -75%;
-  top: 0%;
+  left: 10%;
+  top: 90%;
+}
+#frontBtn {
+  left: 65%;
+  top: 90%;
 }

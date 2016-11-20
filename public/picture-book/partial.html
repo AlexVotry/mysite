@@ -3,13 +3,13 @@
   <div class="flip-container" >
 
     <div id="firstText"> I grew up in Oak Harbor, WA.  When I was in junior high, my dad bought me a TRS-80 computer from Radio Shack.
-
     </div>
+
     <div class="flipper"  ng-repeat="slide in turn.slides">
-      <button  class="btn" id="frontBtn" ng-click="turn.advance($index)" type="button"><span class="glyphicon glyphicon-backward"> Next</span></button>
 
       <div class="front pic{{ $index }}" >
         <img class="frontImage" ng-src="{{slide.image}}" alt="sprint" />
+        <button  class="btn" id="frontBtn" ng-click="turn.advance($index)" type="button"><span class="glyphicon glyphicon-backward"> Next</span></button>
       </div>
 
       <div class="back pic{{ $index }}">

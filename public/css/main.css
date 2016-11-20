@@ -615,7 +615,7 @@
     opacity: 1;
     transform: skewY(145deg) scaleX(2); } }
 
-.flip-container, .front, .back, .firstText {
+.flip-container, .front, .back {
   width: 400px;
   height: 400px; }
 
@@ -645,16 +645,22 @@
   position: relative;
   margin-top: 20%;
   margin-left: 45%; }
+  @media (max-width: 960px) {
+    #photoSet {
+      margin-top: 25%;
+      margin-left: 5%; } }
 
 .flipper {
   transition: 2s;
   transform-style: preserve-3d;
   position: relative;
+  -webkit-transform-origin: left;
   transform-origin: left; }
   @media (max-width: 960px) {
     .flipper {
-      transform-origin: 0% -50%; } }
+      transform-origin: 100% 400px; } }
   .flipper button {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     z-index: 15;
@@ -665,27 +671,32 @@
       background-color: #60cbff; }
 
 .flip {
-  transform: rotateY(180deg); }
+  transform: rotateY(-180deg); }
   @media (max-width: 960px) {
     .flip {
       transform: rotateX(-180deg); } }
 
 /*hide back of pane during swap*/
 .front, .back {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transform-style: preserve-3d;
   position: absolute; }
 
 /*front pane, placed above back*/
 .front {
   z-index: 2;
-  transform: rotateY(0deg);
-  transform: rotateX(0deg); }
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg); }
+  @media (max-width: 960px) {
+    .front {
+      transform: rotateX(0deg); } }
 
 .back {
   height: 410px;
   background-color: #9da09e;
   padding-left: 10%;
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
   border-bottom-right-radius: 1em;
   border-top-right-radius: 1em;
   border-top: 10px solid #A0522D;
@@ -696,7 +707,6 @@
   @media (max-width: 960px) {
     .back {
       transform: rotateX(180deg);
-      transform-origin: 0% -48%;
       border-top-right-radius: 1em;
       border-top-left-radius: 1em;
       border-top: hidden;

@@ -1,12 +1,12 @@
 @import "responsive";
 
-.flip-container, .front, .back, .firstText {
+.flip-container, .front, .back {
   width: 400px;
   height: 400px;
-  // left: 410px;
 }
 .flip-container img {
   max-width: 100%;
+  // @include breakpoint(max-width, 960px) {width: 70%; height: 70%; };
 }
 .frontImage {
   @include bookBorder(right);
@@ -16,15 +16,17 @@
   position: relative;
   margin-top: 20%;
   margin-left: 45%;
-
+  @include breakpoint(max-width, 960px) { margin-top: 25%; margin-left: 5%; };
 }
 .flipper {
   transition: 2s;
   transform-style: preserve-3d;
   position: relative;
+  -webkit-transform-origin: left;
   transform-origin: left;
-  @include breakpoint(max-width, 960px) { transform-origin: 0% -50%; };
+  @include breakpoint(max-width, 960px) { transform-origin: 100% 400px; };
   button {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     z-index: 15;
@@ -37,27 +39,30 @@
   }
 }
 .flip {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
   @include breakpoint(max-width, 960px) { transform: rotateX(-180deg); };
 }
 /*hide back of pane during swap*/
 .front, .back {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transform-style: preserve-3d;
   position: absolute;
 }
 /*front pane, placed above back*/
 .front {
   z-index: 2;
+  -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
-  transform: rotateX(0deg);
+  @include breakpoint(max-width, 960px) { transform: rotateX(0deg) };
 }
 .back {
   height: 410px;
   background-color: $swGrey;
   padding-left: 10%;
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
   @include bookBorder(left);
-  @include breakpoint(max-width, 960px) { transform: rotateX(180deg); transform-origin: 0% -48%; @include vertBorder(bottom); };
+  @include breakpoint(max-width, 960px) { transform: rotateX(180deg); @include vertBorder(bottom); };
 }
 #firstText {
   height: 410px;

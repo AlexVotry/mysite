@@ -910,6 +910,7 @@ body {
   flex: 1 0 27%;
   margin: 2%;
   padding: 3%;
+  padding-bottom: 0%;
   font-size: .8em;
   background-color: #FFD700;
   opacity: .5;
